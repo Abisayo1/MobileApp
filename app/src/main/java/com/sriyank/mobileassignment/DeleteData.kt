@@ -27,7 +27,7 @@ class DeleteData : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.update.setOnClickListener {
-            val intent = Intent(this, DeleteData::class.java)
+            val intent = Intent(this, UpdateData::class.java)
             startActivity(intent)
         }
 
