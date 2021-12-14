@@ -1,5 +1,6 @@
 package com.sriyank.mobileassignment
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -16,6 +17,12 @@ class ReadData : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityReadDataBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.deletedataBtn.setOnClickListener{
+
+            val intent = Intent(this, DeleteData::class.java)
+            startActivity(intent)
+        }
 
         binding.readdataBtn.setOnClickListener{
 

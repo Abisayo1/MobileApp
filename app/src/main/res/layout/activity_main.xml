@@ -142,5 +142,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/description" />
 
+        <Button
+            android:id="@+id/retrieve"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="Retreive"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cancel" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

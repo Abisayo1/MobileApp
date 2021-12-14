@@ -1,5 +1,6 @@
 package com.sriyank.mobileassignment
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -15,6 +16,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.retrieve.setOnClickListener{
+
+            val intent = Intent(this,ReadData::class.java)
+            startActivity(intent)
+
+        }
 
         binding.add.setOnClickListener {
 
