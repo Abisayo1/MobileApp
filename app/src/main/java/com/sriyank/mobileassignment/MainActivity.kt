@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.add.setOnClickListener {
 
-            if (binding.date.text.toString() != )
+            //if (binding.date.text.toString() !=)
 
             val name = binding.name.text.toString()
             val date = binding.date.text.toString()
