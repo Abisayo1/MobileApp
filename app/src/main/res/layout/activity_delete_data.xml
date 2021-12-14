@@ -67,7 +67,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="425dp"
             android:backgroundTint="@color/teal_200"
-            android:text="DELETE DATA"
+            android:text="Update"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
