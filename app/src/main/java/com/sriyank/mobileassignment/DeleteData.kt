@@ -1,5 +1,6 @@
 package com.sriyank.mobileassignment
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -24,8 +25,14 @@ class DeleteData : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDeleteDataBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.update.setOnClickListener {
+            val intent = Intent(this, DeleteData::class.java)
+            startActivity(intent)
+        }
+
         binding.deletedataBtn.setOnClickListener{
-            fun onClick(v: View?) {
+
                 val username: String = binding.etname.getText().toString()
                 if (!username.isEmpty()) {
                     deleteData(username)
@@ -33,13 +40,13 @@ class DeleteData : AppCompatActivity() {
                     Toast.makeText(this@DeleteData, "Please Enter Username", Toast.LENGTH_SHORT)
                         .show()
                 }
-            }
+
         }
     }
 
     private fun deleteData(username: String) {
-        val reference = FirebaseDatabase.getInstance().getReference("Events")
-        reference!!.child(username).removeValue().addOnCompleteListener { task ->
+        database = FirebaseDatabase.getInstance().getReference("Events")
+        database.child(username).removeValue().addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 Toast.makeText(this, "Successfuly Deleted", Toast.LENGTH_SHORT).show()
                 binding.etname.setText("")

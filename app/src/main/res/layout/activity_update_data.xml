@@ -5,59 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".MainActivity">
+    tools:context=".UpdateData">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:src="@drawable/shape"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="176dp"
-            android:text="Upload image"
-            android:textAllCaps="false"
+            android:layout_marginTop="180dp"
+            android:text="UPDATE DATA"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.086"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="236dp"
-            android:layout_marginTop="180dp"
-            android:src="@drawable/shape"
-            app:layout_constraintLeft_toLeftOf="@id/textView2"
-            app:layout_constraintRight_toRightOf="@id/textView2"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/name"
-            android:layout_width="300dp"
+            android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginTop="36dp"
             android:background="@drawable/input"
             android:hint="Name"
-            android:textAllCaps="false"
             android:paddingLeft="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -65,95 +48,79 @@
 
         <EditText
             android:id="@+id/date"
-            android:layout_width="300dp"
+            android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginTop="32dp"
             android:background="@drawable/input"
             android:hint="Date"
-            android:inputType="date"
             android:paddingLeft="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name" />
 
-
         <EditText
             android:id="@+id/time"
-            android:layout_width="300dp"
+            android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginTop="32dp"
             android:background="@drawable/input"
             android:hint="Time"
-            android:inputType="time"
-            android:paddingStart="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/description" />
-
-
-
-        <EditText
-            android:id="@+id/description"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/input"
-            android:hint="location"
             android:paddingLeft="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/date" />
 
         <EditText
+            android:id="@+id/location"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/input"
+            android:hint="Location"
+            android:paddingLeft="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/time" />
+
+        <EditText
             android:id="@+id/description"
-            android:layout_width="300dp"
+            android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginTop="32dp"
             android:background="@drawable/input"
             android:hint="Description"
             android:paddingLeft="20dp"
-            android:inputType="textLongMessage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/time" />
+            app:layout_constraintTop_toBottomOf="@id/location" />
 
         <Button
-            android:id="@+id/cancel"
-            android:layout_width="260dp"
+            android:id="@+id/updateBtn"
+            android:layout_width="360dp"
             android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="672dp"
             android:backgroundTint="@color/teal_200"
-            android:text="Cancel"
+            android:text="Update Data"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/add"
-             />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/add"
-            android:layout_width="260dp"
+            android:id="@+id/create"
+            android:layout_width="360dp"
             android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="742dp"
             android:backgroundTint="@color/teal_200"
-            android:text="Add"
+            android:text="Create"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/description" />
-
-        <Button
-            android:id="@+id/retrieve"
-            android:layout_width="260dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="@color/teal_200"
-            android:text="Retreive"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cancel" />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 </ScrollView>
